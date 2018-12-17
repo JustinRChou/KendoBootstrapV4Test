@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="kendoui.for.jquery.2018.3.1017.trial/styles/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="kendoui.for.jquery.2018.3.1017.trial/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="kendoui.for.jquery.2018.3.1017.trial/styles/kendo.common-material.min.css" rel="stylesheet" />
+    <title>Hello, world!</title>
+    <style>
+        div.card-header[data-toggle=collapse][aria-expanded=false]:before {
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            margin-right: 5px;
+            content: "\f107";
+            transform: rotate(90deg);
+        }
+
+        div.card-header[data-toggle=collapse][aria-expanded=true]:before {
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            margin-right: 5px;
+            content: "\f0d8";
+            transform: rotate(90deg);
+        }
+
+        @keyframes sheen {
+            100% {
+                transform: rotateZ(60deg) translate(1em, -9em) scale(1.5);
+            }
+        }
+
+        button {
+            background: #e5ac8e;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 0.5em;
+            padding: 0 1em;
+            position: relative;
+            overflow: hidden;
+            line-height: 32px;
+        }
+
+            button::after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -50%;
+                bottom: -50%;
+                left: -50%;
+                background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+                transform: rotateZ(60deg) translate(-5em, 7.5em);
+            }
+
+            button:hover::after, button:focus::after {
+                animation: sheen 1s forwards;
+            }
+    </style>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <div class="container-fluid">
+        <i class="fas fa-angle-double-down"></i>
+        <i class="fas fa-angle-down"></i>
+        <button>Oooh SHINY</button>
+        <div class="panel">
+            <div class="panel-heading">
+                Test
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>1</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>1</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>1</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>4</label>
+                            <select class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>5</label>
+                            <select class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>6</label>
+                            <select class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col float-right">
+                        <button class="btn btn-primary">Press</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="panel-heading" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Collaspe</div>
+                            <div class="panel-body collapse" id="multiCollapseExample1">
+                                asdasdasd
+                                asdasd
+                                asdasd
+                                asdasd
+                                asdasd
+                                asdasd
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Content here -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        const $ = jQuery.noConflict(true);
+    </script>
+    <script src="kendoui.for.jquery.2018.3.1017.trial/js/jquery.min.js"></script>
+    <script src="kendoui.for.jquery.2018.3.1017.trial/js/kendo.all.min.js"></script>
+    <script>
+        const kj = jQuery.noConflict(true);
+    </script>
+    <script>
+        $(document).ready(() => {
+            console.log($, kj);
+            var arr = [{ dirid: 1, text: "a" }, { dirid: 2, text: "ab" }]
+            kj("select").kendoDropDownList({
+                dataTextField: "text",
+                dataValueField: "dirid",
+                dataSource: arr,
+            });
+            let reallylongtext = "abcsadasdjnwjqenkqwhbekjaksdaksbdkhabjhj";
+            let reallylongtextV2 = "abcsa dasdjnwjqe nkqwhbekjaksd aksbdkhabjhj";
+            kj("input[type='text']").val(reallylongtext);
+        });
+    </script>
+</body>
+</html>
